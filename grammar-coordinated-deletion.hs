@@ -7,7 +7,7 @@ and returns "cbaxabx(abc)^(m-n)" if n<m
 and "(cba)^(n-m)cbaxabc" if n>m .
 --}
 
--- 'main' runs 'concerge' on an example input.
+-- 'main' runs 'converge' on an example input.
 
 main = converge grammar "cbacbacbacbacbacbacbacbacbaxabcabcabcabcabcabcabcabcabc"
 main :: IO ()
@@ -28,6 +28,7 @@ cons =
     , left 
     , maxABC
     ]
+
 -- top constraints
 top :: Constraint
 top = mkMark $ topl ++ topr ++ stop
